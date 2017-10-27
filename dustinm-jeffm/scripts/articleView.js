@@ -8,6 +8,7 @@ let articleView = {};
 // PUT YOUR RESPONSE HERE
 
 articleView.populateFilters = function() {
+  // console.log('Populating Filters!');
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
