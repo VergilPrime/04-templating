@@ -66,24 +66,35 @@ _Your README.md must include:_
 ```md
 # Project Name
 
-**Author**: Your Name Goes Here
-**Version**: 1.0.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Author**: Jeff Martinez and Dustin Mundy
+**Version**: 1.0.4
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
+This application is designed to present curated content to an audience via the web.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. Create a structured webpage with a template article or two. Style CSS to make it look and act the way you want.
+2. Create a container array for your articles in javascript. Each article should include all data to be displayed in the page.
+3. Create code to iterate your article array and print articles to your DOM.
+4. Adjust the user experience to your hearts content. Our page allows users to expand content or filter articles by author or catagory.
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Our webapp uses Handlebars and JQuery libraries. It is written in HTML, CSS and JavaScript. CSS was provided for this iteration by Kat Cosgrove.
 
 ## Change Log
 <!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource. -->
+* 10/27/2017 0905 - Replaced relevant HTML with JS handlebars code.
+* 10/27/2017 0925 - Replaced clone() jQuery code with handlebars code.
+* 10/27/2017 1030 - Refactored code in articleView to use ES6 Fat Arrow syntax.
 
 ## Credits and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
+CSS by Kat Cosgrove           http://github.com/Katcosgrove/
+jQuery by the jQuery team           https://jquery.org/team/
+handlebars by the handlebars team   http://handlebarsjs.com/
+...
