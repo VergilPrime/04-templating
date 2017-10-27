@@ -5,10 +5,9 @@ let articleView = {};
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// Arrow functions do have their own "this", so the context is the same as where the function is being defined.  We determined if a function could be refactored if it had a contextual this.
 
-articleView.populateFilters = function() {
-  // console.log('Populating Filters!');
+articleView.populateFilters = (() => {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
@@ -25,9 +24,9 @@ articleView.populateFilters = function() {
       }
     }
   });
-};
+});
 
-articleView.handleAuthorFilter = function() {
+articleView.handleAuthorFilter = (() => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -38,9 +37,9 @@ articleView.handleAuthorFilter = function() {
     }
     $('#category-filter').val('');
   });
-};
+});
 
-articleView.handleCategoryFilter = function() {
+articleView.handleCategoryFilter = (() => {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -51,18 +50,18 @@ articleView.handleCategoryFilter = function() {
     }
     $('#author-filter').val('');
   });
-};
+});
 
-articleView.handleMainNav = function() {
+articleView.handleMainNav = (() => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
   });
 
   $('.main-nav .tab:first').click();
-};
+});
 
-articleView.setTeasers = function() {
+articleView.setTeasers = (() => {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('article').on('click', 'a.read-on', function(e) {
     e.preventDefault();
@@ -77,9 +76,9 @@ articleView.setTeasers = function() {
       $(this).parent().find('.article-body *:nth-of-type(n+2)').hide();
     }
   });
-};
+});
 
-$(document).ready(function() {
+$(document).ready(() => {
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
