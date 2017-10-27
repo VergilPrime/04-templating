@@ -2,7 +2,7 @@
 
 let articleView = {};
 
-// TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
+// TODONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // Arrow functions do have their own "this", so the context is the same as where the function is being defined.  We determined if a function could be refactored if it had a contextual this.
